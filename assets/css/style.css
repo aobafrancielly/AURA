@@ -1,0 +1,367 @@
+:root {
+    --gold: #c5a059;
+    --dark: #121212;
+    --light: #ffffff;
+    --gray: #f9f9f9;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+*{ 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Playfair Display', serif; 
+    transition: 0.4s; 
+}
+
+body{ 
+    background-color: var(--light); 
+    color: var(--dark); 
+    overflow-x: hidden; 
+}
+
+header{
+    background: black;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.logo-img{ 
+    height: 60px; 
+    width: auto; 
+    transition: 0.3s; 
+}
+        
+.logo-img:hover{ 
+    opacity: 0.8; 
+    transform: scale(1.02); 
+}
+
+nav{ 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover{ 
+    color: var(--gold); 
+}
+        
+.nav-link-gold{
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero{
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1{ 
+    font-size: 3.5rem; 
+    margin-bottom: 20px; 
+    font-weight: 300; 
+}
+        
+.btn-gold{
+    padding: 15px 40px;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gold:hover{ 
+    background: #ab8b4a; 
+    transform: scale(1.05); 
+}
+
+.grid{
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 80px 5%;
+}
+
+.item{ 
+    text-align: center; 
+    cursor: pointer; 
+}
+
+.item img{ 
+    width: 100%; 
+    height: 350px; 
+    object-fit: cover; 
+    margin-bottom: 15px; 
+}
+        
+.item:hover img{ 
+    filter: sepia(0.5); 
+}
+
+.testimonial-showcase{
+    padding: 80px 0;
+    background-color: var(--gray);
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonial-showcase h2{ 
+    font-size: 2.2rem; 
+    font-weight: 300; 
+    margin-bottom: 40px; 
+}
+
+.card-viewer{ 
+    width: 100%; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.card-track{ 
+    display: flex; 
+    gap: 30px; 
+    will-change: transform; 
+}
+
+.testimonial-card{
+    background: white;
+    min-width: 320px;
+    padding: 35px;
+    text-align: left;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.stars{ 
+    color: var(--gold); 
+    margin-bottom: 10px; 
+    font-size: 1.2rem; 
+}
+
+.testimonial-card p{ 
+    font-style: italic; 
+    margin-bottom: 15px; 
+    line-height: 1.5; 
+}
+
+.testimonial-card h4{ 
+    color: var(--gold); 
+    text-transform: uppercase; 
+    font-size: 0.8rem; 
+    letter-spacing: 1px; 
+}
+
+.custom-section{ 
+    padding: 80px 5%; 
+    background: black; 
+    color: white;
+    text-align: center; 
+}
+
+.configurator{
+    max-width: 600px;
+    margin: 40px auto;
+    background: var(--gray);
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+}
+
+select{ 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: 1px solid #ddd; 
+    outline: none; 
+}
+
+.price-tag{ 
+    font-size: 2rem; 
+    color: var(--gold); 
+    margin: 20px 0; 
+    font-weight: bold; 
+}
+
+.team-section{ 
+    padding: 80px 5%; 
+    text-align: center; 
+    background: white; 
+    color: black;
+}
+        
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.member{
+    background: #D4D4D4;
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.member:hover{
+    transform: translateY(-5px);
+}
+
+.member img{
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: 0,3s;
+}
+        
+.member:hover img{ 
+    filter: grayscale(0%); 
+    transform: scale(1.05); 
+}
+
+.member h4{
+    color: black;
+}
+
+.member span{ 
+    color: var(--gold); 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.reveal{ 
+    opacity: 0; 
+    transform: translateY(40px); 
+}
+
+.reveal.active{ 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.social-icons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a{
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover{
+    color: white;
+}
+
+footer{
+    background: var(--dark);
+    color: white;
+    padding: 40px 5% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-col h3 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px; 
+    color: var(--gold);
+}
+
+.footer-col p {
+    font-size: 0.8rem; 
+    color: #bbb;
+    margin-bottom: 5px; 
+    font-family: sans-serif;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px; 
+}
+
+.footer-social a {
+    width: 30px; 
+    height: 30px;
+    background: #222; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 30px; 
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    header{ 
+        flex-direction: column; padding: 20px; 
+    }
+    nav{ 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        margin-top: 15px; 
+    }
+    .hero h1{ 
+        font-size: 2.2rem; 
+    }
+    .testimonial-card{ 
+        min-width: 280px; 
+    }
+}
