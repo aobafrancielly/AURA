@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Políticas</title>
+    <link rel="icon" type="image/png" href="assets/images/auraicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #1a1a1b;
+            --cream: #fcfaf7;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Playfair Display', serif; }
+        body { background-color: var(--white); color: var(--dark); }
+
+        /* --- HEADER --- */
+        header {
+            background: black;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-img { height: 45px; }
+        .back-link { color: var(--gold); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- BANNER DE BUSCA --- */
+        .search-banner {
+            background: #222;
+            padding: 40px 5%;
+            text-align: center;
+            color: white;
+        }
+        .search-banner h1 { font-size: 1.8rem; margin-bottom: 20px; font-weight: 400; }
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            background: white;
+        }
+        .search-box input { flex: 1; border: none; padding: 12px 15px; outline: none; }
+        .search-box button { background: var(--gold); border: none; padding: 0 20px; color: white; cursor: pointer; }
+
+        /* --- LAYOUT EM COLUNAS --- */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            padding: 0 5%;
+            gap: 40px;
+        }
+
+        /* Sidebar Esquerda */
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .menu-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-header {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu-header:hover { color: var(--gold); }
+
+        .submenu {
+            padding-left: 15px;
+            padding-bottom: 15px;
+            display: none; /* Escondido por padrão */
+        }
+
+        .submenu a {
+            display: block;
+            padding: 8px 0;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+
+        .submenu a:hover, .submenu a.active { color: var(--gold); }
+
+        /* Conteúdo Direita */
+        .content-area {
+            flex: 1;
+        }
+
+        .content-area h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .article-link {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: block;
+            color: #444;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .article-link:hover { color: var(--gold); }
+
+        /* Footer simples */
+        footer {
+            margin-top: 100px;
+            background: var(--gray);
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Classe para abrir o menu via JS */
+        .open { display: block; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html"><img src="media/auralogo.png" alt="Aura" class="logo-img"></a>
+        <a href="home.html" class="back-link">Voltar à Loja</a>
+    </header>
+
+    <div class="search-banner">
+        <h1>Oi, como podemos ajudar?</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Procurar políticas...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleMenu('m1')">Compre com a Aura <i class="fas fa-chevron-down"></i></div>
+                <div class="submenu" id="m1">
+                    <a href="#">Como comprar</a>
+                    <a href="#">Prazos de entrega</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleMenu('m2')">Pagamentos <i class="fas fa-chevron-down"></i></div>
+                <div class="submenu" id="m2">
+                    <a href="#">Parcelamento</a>
+                    <a href="#">Estorno</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleMenu('m3')" style="color: var(--gold);">Políticas <i class="fas fa-chevron-up"></i></div>
+                <div class="submenu open" id="m3">
+                    <a href="#" class="active">Políticas da Aura</a>
+                    <a href="#">Privacidade e Segurança</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Garantia Vitalícia</a>
+                </div>
+            </div>
+        </aside>
+
+        <section class="content-area">
+            <h2>Políticas da Aura</h2>
+            <div class="articles">
+                <a href="#" class="article-link">Políticas Gerais | Artigos</a>
+                <a href="#" class="article-link">Política de Envio de Joias Seguradas</a>
+                <a href="#" class="article-link">Termos de Reembolso e Crédito</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aura Joias | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            const icon = menu.previousElementSibling.querySelector('i');
+            
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            } else {
+                menu.style.display = "block";
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            }
+        }
+    </script>
+</body>
+</html>
