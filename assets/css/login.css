@@ -32,7 +32,7 @@
             width: 100%;
         }
 
-        .logo-img { height: 50px; width: auto; transition: 0.3s; }
+        .logo-img { height: 45px; width: auto; transition: 0.3s; }
         .help-link { color: var(--gold); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
         /* --- AJUSTE DE ESPAÇAMENTO AQUI --- */
