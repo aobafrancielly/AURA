@@ -236,3 +236,50 @@ nav{
             font-size: 0.8rem;
             color: #666;
         }
+
+/* --- CORREÇÃO DE RESPONSIVIDADE DO HEADER --- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca a logo em cima e o menu embaixo */
+        padding: 15px 0;
+        height: auto;
+        position: static; /* Evita problemas de sobreposição no mobile se necessário */
+    }
+
+    .logo-img {
+        height: 35px; /* Logo um pouco menor no celular */
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que os links pulem de linha se não couberem */
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .nav-link, .nav-link-gold {
+        font-size: 0.7rem; /* Diminui o texto para caber tudo */
+        letter-spacing: 0.5px;
+    }
+
+    /* Esconde as barras "|" no mobile para ganhar espaço, se quiser */
+    nav {
+        color: transparent; 
+    }
+    nav a {
+        color: white; /* Garante que os links continuem brancos */
+    }
+}
+
+/* Para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 380px) {
+    .nav-link-gold {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
