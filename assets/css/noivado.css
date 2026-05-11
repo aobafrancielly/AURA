@@ -1,5 +1,4 @@
-
-        :root {
+:root {
             --gold: #c5a059;
             --dark: #1a1a1b;
             --cream: #fcfaf7;
@@ -31,7 +30,7 @@
 }
 
 .logo-img{ 
-    height: 60px; 
+    height: 45px; 
     width: auto; 
     transition: 0.3s; 
 }
@@ -236,6 +235,8 @@ nav{
             font-size: 0.8rem;
             color: #666;
         }
+
+/* --- RESPONSIVIDADE: PÁGINA NOIVADO --- */
 
 /* --- CORREÇÃO DE RESPONSIVIDADE DO HEADER --- */
 
