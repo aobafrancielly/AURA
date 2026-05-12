@@ -1,0 +1,188 @@
+:root {
+    --gold: #c5a059;
+    --dark: #1a1a1b;
+    --cream: #fcfaf7;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Playfair Display', serif; 
+}
+        
+body { 
+    background-color: var(--white); 
+    color: var(--dark); 
+}
+
+
+header {
+    background: black;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img { 
+    height: 45px; 
+}
+
+.back-link { 
+    color: var(--gold); 
+    text-decoration: none; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.search-banner {
+    background: #222;
+    padding: 40px 5%;
+    text-align: center;
+    color: white;
+}
+
+.search-banner h1 { 
+    font-size: 1.8rem;
+    margin-bottom: 20px; 
+    font-weight: 400; 
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+}
+
+.search-box input { 
+    flex: 1; border: none; 
+    padding: 12px 15px; 
+    outline: none; 
+}
+
+.search-box button { 
+    background: var(--gold); 
+    border: none; 
+    padding: 0 20px; 
+    color: white; 
+    cursor: pointer; 
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    padding: 0 5%;
+    gap: 40px;
+}
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.menu-item {
+    border-bottom: 1px solid #eee;
+}
+
+.menu-header {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu-header:hover { 
+    color: var(--gold); 
+}
+
+.submenu {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    display: none;
+}
+
+.submenu a {
+    display: block;
+    padding: 8px 0;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.submenu a:hover, 
+.submenu a.active { 
+    color: var(--gold); 
+}
+
+.content-area {
+    flex: 1;
+}
+
+.content-area h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.article-link {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.article-link:hover { 
+    color: var(--gold); 
+}
+
+footer {
+    margin-top: 100px;
+    background: var(--gray);
+    padding: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.open { 
+    display: block; 
+}
+
+ @media (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+    }
+    .help-search-section, .search-banner {
+        padding: 40px 5%;
+    }
+    .help-search-section h1, .search-banner h1 {
+        font-size: 1.5rem;
+    }
+    .main-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    .category-card {
+        padding: 15px;
+    }
+}
