@@ -220,35 +220,25 @@ footer{
 }
 
 @media (max-width: 768px) {
-    /* Ajuste do Header */
     header {
         padding: 10px 5%;
     }
-
-    /* Banner de Busca menor no celular */
     .help-search-section, .search-banner {
         padding: 40px 5%;
     }
-    
     .help-search-section h1, .search-banner h1 {
         font-size: 1.5rem;
     }
-
-    /* Layout de Políticas: Sidebar em cima e conteúdo embaixo */
     .main-content {
         flex-direction: column; 
         gap: 20px;
     }
-
     .sidebar {
-        width: 100%; /* Menu ocupa a largura toda */
+        width: 100%;
     }
-
-    /* Ajuste do Grid de Categorias */
     .categories-grid {
-        grid-template-columns: 1fr; /* 1 card por linha no celular */
+        grid-template-columns: 1fr;
     }
-
     .category-card {
         padding: 15px;
     }
