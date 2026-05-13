@@ -218,7 +218,9 @@ footer{
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        gap: 15px;
+        padding: 15px 0;
+        height: auto;
+        position: static;
     }
 
     nav {
