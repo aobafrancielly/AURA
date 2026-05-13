@@ -1,0 +1,255 @@
+:root {
+    --gold: #c5a059;
+    --dark: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #fdfaf6;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header{
+    background: black;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.logo-img{ 
+    height: 45px; 
+    width: auto; 
+    transition: 0.3s; 
+}
+        
+.logo-img:hover{ 
+    opacity: 0.8; 
+    transform: scale(1.02); 
+}
+
+nav{ 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover{ 
+    color: var(--gold); 
+}
+        
+.nav-link-gold{
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.auth-links {
+    display: flex;
+    gap: 15px;
+    border-left: 1px solid #444;
+    padding-left: 15px;
+}
+
+.nav-link-gold {
+    color: #c5a059;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+}
+
+.Produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.Item {
+    background: white;
+    border: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.img-container {
+    width: 100%;
+    height: 250px; 
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.Item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.Item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.preco {
+    color: #c5a059;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.botao-detalhes {
+    background-color: #c9a96e;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.botao-detalhes:hover {
+    background-color: #b3925a;
+}
+
+footer{
+    background: var(--dark);
+    color: white;
+    padding: 40px 5% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-col h3 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px; 
+    color: var(--gold);
+}
+
+.footer-col p {
+    font-size: 0.8rem; 
+    color: #bbb;
+    margin-bottom: 5px; 
+    font-family: sans-serif;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px; 
+}
+
+.footer-social a {
+    width: 30px; 
+    height: 30px;
+    background: #222; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.footer-social a:hover{ 
+    background: var(--gold); 
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 30px; 
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+    }
+
+    .auth-links {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
