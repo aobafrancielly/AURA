@@ -216,7 +216,7 @@ footer{
 }
 
 @media (max-width: 768px) {
-    .header-content {
+    header {
         flex-direction: column;
         padding: 15px 0;
         height: auto;
@@ -224,34 +224,29 @@ footer{
     }
 
     nav {
-        flex-wrap: wrap;
+        width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 10px;
     }
 
-    h1 {
-        font-size: 1.8rem;
+    .nav-link, .nav-link-gold {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    nav {
+        color: transparent; 
+    }
+    nav a {
+        color: white;
     }
 }
-
-@media (max-width: 480px) {
-    nav {
-        gap: 10px;
-    }
-    
-    .nav-link {
-        font-size: 0.75rem;
-    }
-
-    .auth-links {
-        border-left: none;
-        padding-left: 0;
-    }
-
-    .footer-container {
+@media (max-width: 380px) {
+    .nav-link-gold {
+        display: block;
+        width: 100%;
         text-align: center;
-    }
-
-    .footer-social {
-        justify-content: center;
+        margin-top: 5px;
     }
 }
