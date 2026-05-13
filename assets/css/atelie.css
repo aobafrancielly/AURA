@@ -240,10 +240,19 @@ footer{
 }
 
 @media (max-width: 1024px) {
-    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 @media (max-width: 768px) {
-    header { flex-direction: column; gap: 15px; }
-    .process-grid { grid-template-columns: 1fr; }
+    header { 
+        flex-direction: column;
+        padding: 15px 0;
+        height: auto;
+        position: static; 
+    }
+    .process-grid { 
+        grid-template-columns: 1fr; 
+    }
 }
