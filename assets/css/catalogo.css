@@ -290,7 +290,6 @@ footer{
     }
     nav {
         flex-wrap: wrap;
-        justify-content: center;
     }
     h1 {
         font-size: 1.8rem;
@@ -307,12 +306,5 @@ footer{
     .auth-links {
         border-left: none;
         padding-left: 0;
-    }
-
-    .footer-container {
-        text-align: center;
-    }
-    .footer-social {
-        justify-content: center;
     }
 }
